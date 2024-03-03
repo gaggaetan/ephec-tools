@@ -1,0 +1,19 @@
+body .bgcolor-orange-ephec {
+    background-color: #ed7520 !important;
+}
+
+body #heinscriptionsub li a,body #hehorairesub li a, body #hejuabs li a, body #hesarsub li a, body #hecososub li a {
+    background-color: #1d5263;
+}
+
+
+#sidebar a, body #sidebar{
+    background-color: #013647;
+}
+
+.logo-ephec-eperso{
+    height: auto;
+    width: auto;
+    max-height: 41px;
+    max-width: 243px;
+}

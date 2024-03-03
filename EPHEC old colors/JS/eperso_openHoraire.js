@@ -1,0 +1,1 @@
+window.open("https://eperso.ephec.be/HeHoraire/Horaire","_self")

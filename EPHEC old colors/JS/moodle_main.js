@@ -1,0 +1,1 @@
+window.open("https://moodle.ephec.be/auth/oidc/","_self")

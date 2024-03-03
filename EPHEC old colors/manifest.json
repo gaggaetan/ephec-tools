@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "EPHEC old colors :)",
+  "version": "0.1.1",
+  "icons": {
+    "16": "IMG/ephec_logo.png",
+    "32": "IMG/ephec_logo.png",
+    "48": "IMG/ephec_logo.png",
+    "128": "IMG/ephec_logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://eperso.ephec.be/*"],
+      "css": ["CSS/eperso_styles.css"],
+      "js" : ["JS/eperso_main.js"]
+    },
+    {
+      "matches": ["*://eperso.ephec.be/"],
+      "js" : ["JS/eperso_openHoraire.js"]
+    },
+    {
+      "matches": ["*://portail.ephec.be/Navigation"],
+      "js" : ["JS/navigation_main.js"],
+      "css": ["CSS/navigation_styles.css"]
+    },
+    {
+      "matches": ["*://moodle.ephec.be/"],
+      "js" : ["JS/moodle_main.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "IMG/*" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
