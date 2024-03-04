@@ -1,21 +1,24 @@
+let choixUtilisateur
 
 function changeLogo (){
-    logoActuel = document.querySelector('.link_container  img').src
-    if (logoActuel == "chrome-extension://jbjigfmokfgbgjomijbbacfjnhljcdfb/IMG/old-logo-ephec.png"){
+
+    if (choixUtilisateur == "old"){
         libChangeLogo('IMG/logo-ephec.png');
         chrome.storage.sync.set({ 'logochoisi': 'new' })
+        choixUtilisateur = "new"
     }else{
         libChangeLogo('IMG/old-logo-ephec.png');
         chrome.storage.sync.set({ 'logochoisi': 'old' })
+        choixUtilisateur = "old"
     }
+
 }
 function libChangeLogo (IMGpath){
-    document.querySelector('.link_container  img').src = chrome.runtime.getURL(IMGpath)
+    document.querySelector('#logo').src = chrome.runtime.getURL(IMGpath)
 }
 
-
 chrome.storage.sync.get(['logochoisi'], function(result) {
-    var choixUtilisateur = result.logochoisi;
+    choixUtilisateur = result.logochoisi;
     if(choixUtilisateur == "new"){
         libChangeLogo('IMG/logo-ephec.png');
     }else{
@@ -23,7 +26,10 @@ chrome.storage.sync.get(['logochoisi'], function(result) {
     }
 });
 
-document.querySelector('.link_container  img').onclick = changeLogo
+
+console.log(document.querySelector('#logo'))
+document.querySelector('#logo').onclick = changeLogo
+
 
 
 

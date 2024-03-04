@@ -1,0 +1,31 @@
+div .coursebox{
+    margin: 0 10px 10px 0 !important
+}
+
+div .row{
+    margin: 0 -15px 0 0
+}
+
+.checkBoxDiplay{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#DiplayCoursesButton{
+    color: #51666C;
+    text-decoration: underline ;
+    font-style: italic;
+    cursor: pointer;
+    padding: 0 0 0 5px;
+}
+
+.checkbocks{
+    display: none;
+}
+
+.DoNotDisplay{
+    display: none !important
+}
+
+

@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "EPHEC old colors :)",
+  "version": "1.0.0",
+  "icons": {
+    "16": "IMG/ephec_logo.png",
+    "32": "IMG/ephec_logo.png",
+    "48": "IMG/ephec_logo.png",
+    "128": "IMG/ephec_logo.png"
+  },
+  "description": "Improve the design aesthetics and user experience of the EPHEC's online platforms.",
+  "content_scripts": [
+    {
+      "matches": ["*://eperso.ephec.be/*"],
+      "css": ["CSS/eperso_logo.css"],
+      "js" : ["JS/eperso_logo.js"]
+    },
+    {
+      "matches": ["*://eperso.ephec.be/"],
+      "js" : ["JS/eperso_openHoraire.js"]
+    },
+    {
+      "matches": ["*://portail.ephec.be/Navigation"],
+      "js" : ["JS/navigation_logo.js"],
+      "css": ["CSS/navigation_logo.css"]
+    },
+    {
+      "matches": ["*://moodle.ephec.be/"],
+      "js" : ["JS/moodle_log_in.js"]
+    },
+    {
+      "matches": ["*://moodle.ephec.be/*"],
+      "js" : ["JS/moodle_logo.js"],
+      "css": ["CSS/moodle_logo.css"]
+    },
+    {
+      "matches": ["*://moodle.ephec.be/my/"],
+      "js" : ["JS/moodle_coursView.js"],
+      "css": ["CSS/moodle_coursVieuw.css"]
+    },
+    {
+      "matches": ["*://portail.ephec.be/"],
+      "js" : ["JS/portail_logo.js"],
+      "css": ["CSS/portail_main.css"]
+    },
+    {
+      "matches": ["*://eperso.ephec.be/*"],
+      "js" : ["JS/eperso_color_choice.js"],
+      "css": ["CSS/eperso_color_choice.css"]
+    }
+
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "IMG/*", "CSS/*"],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
