@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "EPHEC old colors :)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icons": {
     "16": "IMG/ephec_logo.png",
     "32": "IMG/ephec_logo.png",
@@ -34,7 +34,7 @@
       "css": ["CSS/moodle_logo.css"]
     },
     {
-      "matches": ["*://moodle.ephec.be/my/"],
+      "matches": ["*://moodle.ephec.be/my/*"],
       "js" : ["JS/moodle_coursView.js"],
       "css": ["CSS/moodle_coursVieuw.css"]
     },
