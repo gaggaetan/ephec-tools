@@ -1,6 +1,6 @@
-Hy, this is a personal project "chrome extension" made for fun and to get a better user experience on the the EPHEC's online platforms.
+Hi, this is a personal project "chrome extension" made for fun and to get a better user experience on the the EPHEC's online platforms.
 
-It improve the design aesthetics and user experience of the EPHEC's online platforms.
+It improves the design aesthetics and user experience of the EPHEC's online platforms.
 
 Features :
  - Restore EPHEC's original colors.
