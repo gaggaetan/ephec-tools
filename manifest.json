@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "EPHEC old colors :)",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "icons": {
     "16": "IMG/ephec_logo.png",
     "32": "IMG/ephec_logo.png",
@@ -18,11 +18,6 @@
     {
       "matches": ["*://eperso.ephec.be/"],
       "js" : ["JS/eperso_openHoraire.js"]
-    },
-    {
-      "matches": ["*://portail.ephec.be/Navigation"],
-      "js" : ["JS/navigation_logo.js"],
-      "css": ["CSS/navigation_logo.css"]
     },
     {
       "matches": ["*://moodle.ephec.be/"],
