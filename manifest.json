@@ -34,7 +34,7 @@
       "css": ["CSS/moodle_coursVieuw.css"]
     },
     {
-      "matches": ["*://portail.ephec.be/"],
+      "matches": ["*://portail.ephec.be/", "*://portal.ephec.be/"],
       "js" : ["JS/portail_logo.js"],
       "css": ["CSS/portail_main.css"]
     },

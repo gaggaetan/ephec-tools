@@ -1,12 +1,12 @@
-body .bgcolor-orange-ephec {
+body .bgcolor-orange-ephec.enable-extension{
     background-color: #ed7520 !important;
 }
 
-body #heinscriptionsub li a,body #hehorairesub li a, body #hejuabs li a, body #hesarsub li a, body #hecososub li a {
+body #heinscriptionsub li a.enable-extension,body #hehorairesub li a.enable-extension, body #hejuabs li a.enable-extension, body #hesarsub li a.enable-extension, body #hecososub li a.enable-extension{
     background-color: #1d5263;
 }
 
-#sidebar a, body #sidebar{
+#sidebar a.enable-extension, body #sidebar.enable-extension{
     background-color: #013647;
 }
 
