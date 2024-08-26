@@ -1,27 +1,26 @@
 let choixUtilisateur
+let NewLogoPath = document.querySelector('#logo').src
 
 function changeLogo (){
 
     if (choixUtilisateur == "old"){
-        libChangeLogo('IMG/logo-ephec.png');
-        chrome.storage.sync.set({ 'logochoisi': 'new' })
+        libChangeLogo(NewLogoPath);
+        browser.storage.local.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
     }else{
-        libChangeLogo('IMG/old-logo-ephec.png');
-        chrome.storage.sync.set({ 'logochoisi': 'old' })
+        libChangeLogo(browser.runtime.getURL('IMG/old-logo-ephec.png'));
+        browser.storage.local.set({ 'logochoisi': 'old' })
         choixUtilisateur = "old"
     }
 
 }
 function libChangeLogo (IMGpath){
-    document.querySelector('#logo').src = chrome.runtime.getURL(IMGpath)
+    document.querySelector('#logo').src = browser.runtime.getURL(IMGpath)
 }
 
-chrome.storage.sync.get(['logochoisi'], function(result) {
+browser.storage.local.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
-    if(choixUtilisateur == "new"){
-        libChangeLogo('IMG/logo-ephec.png');
-    }else{
+    if(choixUtilisateur == "old"){
         libChangeLogo('IMG/old-logo-ephec.png');
     }
 });
