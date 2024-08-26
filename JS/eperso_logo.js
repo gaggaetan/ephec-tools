@@ -5,11 +5,11 @@ function changeLogo (){
 
     if (choixUtilisateur == "old"){
         newTheme()
-        browser.storage.local.set({ 'logochoisi': 'new' })
+        browser.storage.sync.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
     }else{
         oldTheme()
-        browser.storage.local.set({ 'logochoisi': 'old' })
+        browser.storage.sync.set({ 'logochoisi': 'old' })
         choixUtilisateur = "old"
     }
 }
@@ -19,7 +19,7 @@ function libChangeLogo (IMGpath){
 }
 
 
-browser.storage.local.get(['logochoisi'], function(result) {
+browser.storage.sync.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
     if(choixUtilisateur == "old"){
         oldTheme()
