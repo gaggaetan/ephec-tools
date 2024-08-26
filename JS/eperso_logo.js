@@ -15,7 +15,7 @@ function changeLogo (){
 }
 
 function libChangeLogo (IMGpath){
-    document.querySelector(".logo-ephec-eperso").src = chrome.runtime.getURL(IMGpath)
+    document.querySelector(".logo-ephec-eperso").src = browser.runtime.getURL(IMGpath)
 }
 
 
