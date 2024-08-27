@@ -4,11 +4,11 @@ let newLogoPath = document.querySelector('.img-logo').src
 function changeLogo (){
 
     if (choixUtilisateur === "old"){
-        newTheme()
+        changeTheme('new')
         chrome.storage.sync.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
     }else{
-        oldTheme()
+        changeTheme('old')
         chrome.storage.sync.set({ 'logochoisi': 'old' })
         choixUtilisateur = "old"
     }
@@ -22,27 +22,18 @@ chrome.storage.sync.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
 
     if(choixUtilisateur === "old"){
-        oldTheme()
+        changeTheme('old')
     }
 });
 
 
 document.querySelector('.img-logo').onclick = changeLogo
 
-function oldTheme(){
-    libChangeLogo(chrome.runtime.getURL('IMG/old-logo-ephec-portail.png'));
+function changeTheme(theme){
+    libChangeLogo((theme === 'old' ? chrome.runtime.getURL('IMG/old-logo-ephec-portail.png') : newLogoPath));
     document.querySelectorAll('.profil[b-p2i6fi6whn], div .bg-primary[b-p2i6fi6whn]').forEach(el => {
-        el.setAttribute('style', 'background-color: #F47A20 !important;');
+        el.setAttribute('style', `background-color: ${(theme === 'old' ? '#F47A20' : '#1F2A37')} !important;`);
     })
 }
-
-function newTheme(){
-    libChangeLogo(newLogoPath);
-    document.querySelectorAll('.profil[b-p2i6fi6whn], div .bg-primary[b-p2i6fi6whn]').forEach(el => {
-        el.setAttribute('style', 'background-color: #1F2A37 !important;');
-    })
-}
-
-
 
 
