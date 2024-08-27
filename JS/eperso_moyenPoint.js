@@ -32,7 +32,7 @@ if(document.querySelectorAll('tbody').length !== 5){
                 moyenne2 += +x
             }
         }
-        tab.innerHTML += `<tr><td>moyenne</td><td></td><td></td><td></td><td>${(moyenne === 0 ? ' ' : (moyenne / tabPoint[0].length).toFixed(1))}</td><td>${(moyenne2 === 0 ? ' ' : (moyenne2 / tabPoint[1].length).toFixed(1))}</td><td></td><tr>`
+        tab.innerHTML += `<tr style="background-color: lightblue; border: solid red 1px"><td>moyenne</td><td></td><td></td><td></td><td>${(moyenne === 0 ? ' ' : (moyenne / tabPoint[0].length).toFixed(1))}</td><td>${(moyenne2 === 0 ? ' ' : (moyenne2 / tabPoint[1].length).toFixed(1))}</td><td></td><tr>`
     }else {
         for (let x = 7; x < 9; x++) {
             temp = []
@@ -56,6 +56,6 @@ if(document.querySelectorAll('tbody').length !== 5){
                 moyenne2 += +x
             }
         }
-        tab.innerHTML += `<tr><td>moyenne</td><td></td><td></td><td></td><td></td><td></td><td></td><td>${(moyenne === 0 ? ' ' : (moyenne / tabPoint[0].length).toFixed(1))}</td><td>${(moyenne2 === 0 ? ' ' : (moyenne2 / tabPoint[1].length).toFixed(1))}</td><tr>`
+        tab.innerHTML += `<tr style="background-color: lightblue; border: solid red 1px"><td>moyenne</td><td></td><td></td><td></td><td></td><td></td><td></td><td>${(moyenne === 0 ? ' ' : (moyenne / tabPoint[0].length).toFixed(1))}</td><td>${(moyenne2 === 0 ? ' ' : (moyenne2 / tabPoint[1].length).toFixed(1))}</td><tr>`
     }
 }
