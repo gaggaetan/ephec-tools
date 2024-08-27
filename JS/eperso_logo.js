@@ -1,6 +1,6 @@
 let choixUtilisateur
 let newLogoPath = document.querySelector(".logo-ephec-eperso").src
-console.log(newLogoPath)
+
 
 function changeLogo (){
 
