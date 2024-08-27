@@ -3,7 +3,7 @@ let newLogoPath = document.querySelector('.img-logo').src
 
 function changeLogo (){
 
-    if (choixUtilisateur == "old"){
+    if (choixUtilisateur === "old"){
         newTheme()
         chrome.storage.sync.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
@@ -21,7 +21,7 @@ function libChangeLogo (IMGpath){
 chrome.storage.sync.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
 
-    if(choixUtilisateur == "old"){
+    if(choixUtilisateur === "old"){
         oldTheme()
     }
 });

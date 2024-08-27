@@ -3,7 +3,7 @@ let NewLogoPath = document.querySelector('#logo').src
 
 function changeLogo (){
 
-    if (choixUtilisateur == "old"){
+    if (choixUtilisateur === "old"){
         libChangeLogo(NewLogoPath);
         chrome.storage.sync.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
@@ -20,7 +20,7 @@ function libChangeLogo (IMGpath){
 
 chrome.storage.sync.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
-    if(choixUtilisateur == "old"){
+    if(choixUtilisateur === "old"){
         libChangeLogo(chrome.runtime.getURL('IMG/old-logo-ephec.png'));
     }
 });
