@@ -16,6 +16,11 @@
       "js" : ["JS/eperso_logo.js"]
     },
     {
+      "matches": ["*://eperso.ephec.be/HeResultat/*"],
+      "js" : ["JS/eperso_moyenPoint.js"],
+      "run_at" : "document_end"
+    },
+    {
       "matches": ["*://eperso.ephec.be/"],
       "js" : ["JS/eperso_openHoraire.js"]
     },
