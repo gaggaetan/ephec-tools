@@ -53,5 +53,11 @@
   ],
   "permissions": [
     "storage"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{2c1ce59e-b9c7-49d1-b56c-cf35abd238f6}",
+      "strict_min_version": "42.0"
+    }
+  }
 }

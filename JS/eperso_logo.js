@@ -1,25 +1,26 @@
 let choixUtilisateur
 let newLogoPath = document.querySelector(".logo-ephec-eperso").src
+console.log(newLogoPath)
 
 function changeLogo (){
 
     if (choixUtilisateur == "old"){
         newTheme()
-        browser.storage.sync.set({ 'logochoisi': 'new' })
+        chrome.storage.sync.set({ 'logochoisi': 'new' })
         choixUtilisateur = "new"
     }else{
         oldTheme()
-        browser.storage.sync.set({ 'logochoisi': 'old' })
+        chrome.storage.sync.set({ 'logochoisi': 'old' })
         choixUtilisateur = "old"
     }
 }
 
 function libChangeLogo (IMGpath){
-    document.querySelector(".logo-ephec-eperso").src = browser.runtime.getURL(IMGpath)
+    document.querySelector(".logo-ephec-eperso").src = IMGpath
 }
 
 
-browser.storage.sync.get(['logochoisi'], function(result) {
+chrome.storage.sync.get(['logochoisi'], function(result) {
     choixUtilisateur = result.logochoisi;
     if(choixUtilisateur == "old"){
         oldTheme()
@@ -30,7 +31,7 @@ browser.storage.sync.get(['logochoisi'], function(result) {
 document.querySelector(".logo-ephec-eperso").onclick = changeLogo
 
 function oldTheme(){
-    libChangeLogo(browser.runtime.getURL('IMG/old-logo-ephec-eperso.png'));
+    libChangeLogo(chrome.runtime.getURL('IMG/old-logo-ephec-eperso.png'));
     document.querySelector('.navbar-dark.bgcolor-orange-ephec').style.backgroundColor = "#fd7e14"
 
     let sidebarElements = document.querySelectorAll('#sidebar a, body #sidebar');
