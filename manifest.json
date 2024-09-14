@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "EPHEC old colors :)",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "icons": {
     "16": "IMG/ephec_logo.png",
     "32": "IMG/ephec_logo.png",
@@ -16,13 +16,13 @@
       "js" : ["JS/eperso_logo.js"]
     },
     {
-      "matches": ["*://eperso.ephec.be/"],
-      "js" : ["JS/eperso_openHoraire.js"]
+      "matches": ["*://eperso.ephec.be/HeResultat/*"],
+      "js" : ["JS/eperso_moyenPoint.js"],
+      "run_at" : "document_end"
     },
     {
-      "matches": ["*://portail.ephec.be/Navigation"],
-      "js" : ["JS/navigation_logo.js"],
-      "css": ["CSS/navigation_logo.css"]
+      "matches": ["*://eperso.ephec.be/"],
+      "js" : ["JS/eperso_openHoraire.js"]
     },
     {
       "matches": ["*://moodle.ephec.be/"],
@@ -39,7 +39,7 @@
       "css": ["CSS/moodle_coursVieuw.css"]
     },
     {
-      "matches": ["*://portail.ephec.be/"],
+      "matches": ["*://portail.ephec.be/", "*://portal.ephec.be/"],
       "js" : ["JS/portail_logo.js"],
       "css": ["CSS/portail_main.css"]
     },
@@ -58,5 +58,11 @@
   ],
   "permissions": [
     "storage"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{2c1ce59e-b9c7-49d1-b56c-cf35abd238f6}",
+      "strict_min_version": "42.0"
+    }
+  }
 }
